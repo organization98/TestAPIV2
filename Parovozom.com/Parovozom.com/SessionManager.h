@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+// определение блока
 typedef void (^NetworkBlock)(BOOL succes, id data, NSError *error);
 
 @interface SessionManager : NSObject

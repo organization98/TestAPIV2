@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D105g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="NkT-Gl-UF3">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Roboto-Medium.ttf">
@@ -35,7 +35,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="s2N-rs-EmU" kind="push" identifier="showRoutes" id="mhF-a0-nKf"/>
+                                    <segue destination="7XS-O0-CDE" kind="push" identifier="tabSegue" id="Ulb-zy-8Dm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1PM-PX-OaC">
@@ -156,7 +156,7 @@
             </objects>
             <point key="canvasLocation" x="732" y="301"/>
         </scene>
-        <!--Routes Controller-->
+        <!--Buy Tickets-->
         <scene sceneID="Iux-bz-IQr">
             <objects>
                 <viewController id="s2N-rs-EmU" customClass="RoutesController" sceneMemberID="viewController">
@@ -165,23 +165,24 @@
                         <viewControllerLayoutGuide type="bottom" id="gCR-0O-0EP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Hkm-Gh-DkY">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="199" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="e1B-c5-bFf">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="e1B-c5-bFf" firstAttribute="top" secondItem="krg-os-nQO" secondAttribute="bottom" id="BNL-JI-7ep"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="e1B-c5-bFf" secondAttribute="trailing" constant="-16" id="WDJ-BK-CaP"/>
-                            <constraint firstItem="e1B-c5-bFf" firstAttribute="leading" secondItem="Hkm-Gh-DkY" secondAttribute="leadingMargin" constant="-16" id="dUH-dy-upD"/>
-                            <constraint firstItem="gCR-0O-0EP" firstAttribute="top" secondItem="e1B-c5-bFf" secondAttribute="bottom" id="qh1-Mz-qBE"/>
+                            <constraint firstItem="e1B-c5-bFf" firstAttribute="top" secondItem="Hkm-Gh-DkY" secondAttribute="top" id="NG9-9d-PCA"/>
+                            <constraint firstItem="gCR-0O-0EP" firstAttribute="top" secondItem="e1B-c5-bFf" secondAttribute="bottom" id="Qjf-9F-emf"/>
+                            <constraint firstItem="e1B-c5-bFf" firstAttribute="leading" secondItem="Hkm-Gh-DkY" secondAttribute="leading" id="SBK-Mq-RqR"/>
+                            <constraint firstAttribute="trailing" secondItem="e1B-c5-bFf" secondAttribute="trailing" id="vO5-cL-mx2"/>
                         </constraints>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <tabBarItem key="tabBarItem" title="Buy Tickets" image="tickets" id="cb5-yG-taI"/>
                     <navigationItem key="navigationItem" id="tMx-9Z-Fvm"/>
                     <connections>
                         <outlet property="tableView" destination="e1B-c5-bFf" id="Ibi-Be-HXr"/>
@@ -189,7 +190,67 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uyj-If-Xhn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1225" y="301"/>
+            <point key="canvasLocation" x="1260" y="-580"/>
+        </scene>
+        <!--My Tickets-->
+        <scene sceneID="X4a-qz-ABq">
+            <objects>
+                <viewController id="hg2-eW-bnr" customClass="MyTicketsController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ngG-sU-7J4"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ogb-L5-p3H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JkO-cA-EKE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Tickets" image="my-tickets" id="vpc-zX-5aQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Rd-dh-mak" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1744" y="301"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="V6r-ZB-giV">
+            <objects>
+                <tabBarController id="7XS-O0-CDE" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="5Mo-NM-wuw"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="vXD-Qz-4Ha">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="s2N-rs-EmU" kind="relationship" relationship="viewControllers" id="bPI-LQ-UXV"/>
+                        <segue destination="hg2-eW-bnr" kind="relationship" relationship="viewControllers" id="Q0f-IO-fg2"/>
+                        <segue destination="hai-yn-bJG" kind="relationship" relationship="viewControllers" id="a0P-fb-BzV"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fh2-TG-fE3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1260" y="301"/>
+        </scene>
+        <!--More-->
+        <scene sceneID="y8f-V8-mPb">
+            <objects>
+                <viewController id="hai-yn-bJG" customClass="MoreController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yLn-7k-ghd"/>
+                        <viewControllerLayoutGuide type="bottom" id="7w6-D7-3kE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UoZ-U2-SXo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="More" image="more" id="ebe-d1-g6x"/>
+                    <navigationItem key="navigationItem" id="m1r-PB-WJv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="axM-K0-bjQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1260" y="1000"/>
         </scene>
         <!--Date Departure Controller-->
         <scene sceneID="GGT-pf-BRp">
@@ -327,6 +388,9 @@
         <image name="car-from.png" width="34" height="23"/>
         <image name="car-to.png" width="34" height="23"/>
         <image name="change-arrows.png" width="26" height="32"/>
+        <image name="more" width="35" height="10"/>
+        <image name="my-tickets" width="30" height="20"/>
+        <image name="tickets" width="24" height="27"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -334,6 +398,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="z4Z-OK-dMq"/>
+        <segue reference="jhh-km-R92"/>
     </inferredMetricsTieBreakers>
 </document>

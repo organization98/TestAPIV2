@@ -25,8 +25,8 @@
 + (SessionManager *)sharedManager {
     static SessionManager *manager = nil;
     static dispatch_once_t onceTaken;
-    dispatch_once (& onceTaken, ^{
-        manager = [SessionManager new];
+    dispatch_once (&onceTaken, ^{
+        manager = [[SessionManager alloc] init];
     });    
     return manager;
 }
@@ -66,7 +66,7 @@
     // Выполнить транзакцию авторизации, сохраниить сессию
     NSURL *urlOffLine = [NSURL URLWithString:[NSString stringWithFormat:@"%@/auth?username=%@&password=%@&mode=offline", domain, username, password]];
     NSURL *urlOnLine = [NSURL URLWithString:[NSString stringWithFormat:@"%@/auth?username=%@&password=%@", domain, username, password]];
-    [self requestFromURL:urlOnLine completion:^(BOOL succes, id data, NSError *error) {
+    [self requestFromURL:urlOffLine completion:^(BOOL succes, id data, NSError *error) {
         if ([[data objectForKey:@"result"] isEqual:@"OK"]) {
             session = [data objectForKey:@"session"];
             block (succes, data, error);

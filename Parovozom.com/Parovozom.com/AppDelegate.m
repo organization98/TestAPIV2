@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "Constants.h"
 
+#import "Route.h"
+
 @interface AppDelegate ()
 
 @end
@@ -30,13 +32,18 @@
     
     [[UINavigationBar appearance] setTintColor:WhiteColor];
     
-    
     // изменение цвета Toolbar и цвета шрифта кнопок
     [[UIToolbar appearance] setBarTintColor:MintColor];
     [[UIToolbar appearance] setTintColor:WhiteColor];
     
+    // изменение цвета TabBar и цвета шрифта кнопок
+    [[UITabBar appearance] setTintColor:MintColor];
+    [[UITabBar appearance] setBackgroundColor:WhiteColor];
+    
     // изменение стиля StatusBar
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    [Route sharedManager];
     
     return YES;
 }

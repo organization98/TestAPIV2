@@ -16,7 +16,11 @@
 // controllers
 #import "ChoiseStationController.h"
 #import "DateDepartureController.h"
+
+// tabBarControllers
 #import "RoutesController.h"
+#import "MyTicketsController.h"
+#import "MoreController.h"
 
 @interface StartController () <ChoiseStationControllerDelegate, DateDepartureControllerDelegate>
 
@@ -134,11 +138,15 @@
         ChoiseStationController *controller = (ChoiseStationController *)segue.destinationViewController;
         controller.delegate = self;
         self.direction = @"to";
-    } else if ([segue.identifier isEqualToString:@"showRoutes"]) {
-        RoutesController *controller = (RoutesController *)segue.destinationViewController;
-        controller.stationFrom = self.stationFrom;
-        controller.stationTo = self.stationTo;
-        controller.startDate = @"2015-03-28"; //self.startDate; // нужно изменить формат даты для запроса
+    } else if ([segue.identifier isEqualToString:@"tabSegue"]) {
+        
+
+        UITabBarController *tabBarController = segue.destinationViewController;
+        tabBarController.title = @"TabBar";
+        RoutesController *c1 = (RoutesController *)[tabBarController.viewControllers objectAtIndex:0];
+        c1.stationFrom = self.stationFrom;
+        c1.stationTo = self.stationTo;
+        c1.startDate = @"2015-03-28"; //self.startDate; // нужно изменить формат даты для запроса
     }
 }
 

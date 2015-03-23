@@ -97,6 +97,8 @@
 		327B2B381ABE101D00439DDC /* RobotoCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 327B2B261ABE101D00439DDC /* RobotoCondensed-LightItalic.ttf */; };
 		327B2B391ABE101D00439DDC /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 327B2B271ABE101D00439DDC /* RobotoCondensed-Regular.ttf */; };
 		329BEFA41A91B95800B61687 /* UIImage+ImageWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 329BEFA31A91B95800B61687 /* UIImage+ImageWithColor.m */; };
+		329C49801ABEC917003FCA59 /* MoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = 329C497F1ABEC917003FCA59 /* MoreController.m */; };
+		329C49841ABEC981003FCA59 /* MyTicketsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 329C49831ABEC981003FCA59 /* MyTicketsController.m */; };
 		32ECC4D91A9056DD000EE957 /* ChoiseStationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32ECC4D81A9056DD000EE957 /* ChoiseStationController.m */; };
 		32ECC4E11A90572D000EE957 /* DateDepartureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32ECC4E01A90572D000EE957 /* DateDepartureController.m */; };
 		32FF11921A972E99004208AA /* time.png in Resources */ = {isa = PBXBuildFile; fileRef = 32FF118F1A972E99004208AA /* time.png */; };
@@ -254,6 +256,10 @@
 		327B2B271ABE101D00439DDC /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		329BEFA21A91B95800B61687 /* UIImage+ImageWithColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithColor.h"; sourceTree = "<group>"; };
 		329BEFA31A91B95800B61687 /* UIImage+ImageWithColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithColor.m"; sourceTree = "<group>"; };
+		329C497E1ABEC917003FCA59 /* MoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreController.h; sourceTree = "<group>"; };
+		329C497F1ABEC917003FCA59 /* MoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreController.m; sourceTree = "<group>"; };
+		329C49821ABEC981003FCA59 /* MyTicketsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTicketsController.h; sourceTree = "<group>"; };
+		329C49831ABEC981003FCA59 /* MyTicketsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTicketsController.m; sourceTree = "<group>"; };
 		32ECC4D71A9056DD000EE957 /* ChoiseStationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiseStationController.h; sourceTree = "<group>"; };
 		32ECC4D81A9056DD000EE957 /* ChoiseStationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiseStationController.m; sourceTree = "<group>"; };
 		32ECC4DF1A90572D000EE957 /* DateDepartureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateDepartureController.h; sourceTree = "<group>"; };
@@ -570,6 +576,8 @@
 				32ECC4DA1A9056E2000EE957 /* ChoiseStationController */,
 				32ECC4E21A905737000EE957 /* DateDepartureController */,
 				324715241A948454002F0555 /* RoutesController */,
+				329C49851ABEC989003FCA59 /* MyTicketsController */,
+				329C49811ABEC925003FCA59 /* MoreController */,
 				3247158A1A949024002F0555 /* SchemeController */,
 				324715961A949060002F0555 /* WebViewController */,
 			);
@@ -609,6 +617,24 @@
 			);
 			name = "Roboto Font Collection";
 			path = "Resources/Roboto Font Collection";
+			sourceTree = "<group>";
+		};
+		329C49811ABEC925003FCA59 /* MoreController */ = {
+			isa = PBXGroup;
+			children = (
+				329C497E1ABEC917003FCA59 /* MoreController.h */,
+				329C497F1ABEC917003FCA59 /* MoreController.m */,
+			);
+			name = MoreController;
+			sourceTree = "<group>";
+		};
+		329C49851ABEC989003FCA59 /* MyTicketsController */ = {
+			isa = PBXGroup;
+			children = (
+				329C49821ABEC981003FCA59 /* MyTicketsController.h */,
+				329C49831ABEC981003FCA59 /* MyTicketsController.m */,
+			);
+			name = MyTicketsController;
 			sourceTree = "<group>";
 		};
 		32ECC4D51A905661000EE957 /* Categories */ = {
@@ -800,6 +826,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				329C49841ABEC981003FCA59 /* MyTicketsController.m in Sources */,
 				324715651A948C80002F0555 /* AFHTTPRequestOperation.m in Sources */,
 				3247159B1A949076002F0555 /* WebViewController.m in Sources */,
 				324715751A948C80002F0555 /* RSDFDatePickerView.m in Sources */,
@@ -810,6 +837,7 @@
 				324715741A948C80002F0555 /* RSDFDatePickerMonthHeader.m in Sources */,
 				324715791A948C80002F0555 /* UIButton+AFNetworking.m in Sources */,
 				324715771A948C80002F0555 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				329C49801ABEC917003FCA59 /* MoreController.m in Sources */,
 				3247157B1A948C80002F0555 /* UIProgressView+AFNetworking.m in Sources */,
 				3272E42C1A8F387F004811CF /* UIColor+ConvertHEX.m in Sources */,
 				322858DD1A7E3C6C00723AA4 /* AppDelegate.m in Sources */,

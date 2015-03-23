@@ -10,6 +10,13 @@
 
 @implementation Route
 
-
++ (Route *)sharedManager {
+    static Route *manager = nil;
+    static dispatch_once_t onceTaken;
+    dispatch_once (&onceTaken, ^{
+        manager = [[Route alloc] init];
+    });
+    return manager;
+}
 
 @end

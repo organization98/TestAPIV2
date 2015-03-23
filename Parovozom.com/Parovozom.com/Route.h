@@ -16,4 +16,6 @@
 @property (strong, nonatomic) NSString *toStationCode;
 @property (strong, nonatomic) NSString *dateDeparture;
 
++ (Route *)sharedManager;
+
 @end
