@@ -10,4 +10,8 @@
 
 @implementation MyTicketsController
 
+- (void)viewDidLoad {
+    self.navigationItem.title = NSStringFromClass([MyTicketsController class]);
+}
+
 @end

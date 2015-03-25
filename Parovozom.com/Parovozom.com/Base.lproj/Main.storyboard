@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D105g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="NkT-Gl-UF3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D113c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="NkT-Gl-UF3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
@@ -156,7 +156,7 @@
             </objects>
             <point key="canvasLocation" x="732" y="301"/>
         </scene>
-        <!--Buy Tickets-->
+        <!--Routes Controller-->
         <scene sceneID="Iux-bz-IQr">
             <objects>
                 <viewController id="s2N-rs-EmU" customClass="RoutesController" sceneMemberID="viewController">
@@ -165,11 +165,11 @@
                         <viewControllerLayoutGuide type="bottom" id="gCR-0O-0EP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Hkm-Gh-DkY">
-                        <rect key="frame" x="0.0" y="64" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="199" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="e1B-c5-bFf">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -181,8 +181,7 @@
                             <constraint firstAttribute="trailing" secondItem="e1B-c5-bFf" secondAttribute="trailing" id="vO5-cL-mx2"/>
                         </constraints>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <tabBarItem key="tabBarItem" title="Buy Tickets" image="tickets" id="cb5-yG-taI"/>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="tMx-9Z-Fvm"/>
                     <connections>
                         <outlet property="tableView" destination="e1B-c5-bFf" id="Ibi-Be-HXr"/>
@@ -190,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uyj-If-Xhn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1260" y="-580"/>
+            <point key="canvasLocation" x="1792" y="-580"/>
         </scene>
         <!--My Tickets-->
         <scene sceneID="X4a-qz-ABq">
@@ -223,7 +222,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="s2N-rs-EmU" kind="relationship" relationship="viewControllers" id="bPI-LQ-UXV"/>
+                        <segue destination="90N-Db-9Fa" kind="relationship" relationship="viewControllers" id="bPI-LQ-UXV"/>
                         <segue destination="hg2-eW-bnr" kind="relationship" relationship="viewControllers" id="Q0f-IO-fg2"/>
                         <segue destination="hai-yn-bJG" kind="relationship" relationship="viewControllers" id="a0P-fb-BzV"/>
                     </connections>
@@ -381,6 +380,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ORb-1j-lyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="200" y="301"/>
+        </scene>
+        <!--Buy Tickets-->
+        <scene sceneID="iYg-5A-oI3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="90N-Db-9Fa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Buy Tickets" image="tickets" id="cb5-yG-taI"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QRN-dP-TtI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="s2N-rs-EmU" kind="relationship" relationship="rootViewController" id="GFi-dM-bdp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rmo-aG-afb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1260" y="-580"/>
         </scene>
     </scenes>
     <resources>

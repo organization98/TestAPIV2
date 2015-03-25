@@ -140,13 +140,22 @@
         self.direction = @"to";
     } else if ([segue.identifier isEqualToString:@"tabSegue"]) {
         
-
+        UITabBarController *tabBarController = segue.destinationViewController;
+        
+        UINavigationController *navController1 = [tabBarController.viewControllers objectAtIndex:0];
+        RoutesController *c1 = (RoutesController *)navController1.topViewController;
+        c1.stationFrom = self.stationFrom;
+        c1.stationTo = self.stationTo;
+        c1.startDate = @"2015-03-28"; //self.startDate; // нужно изменить формат даты для запроса
+        
+        /*
         UITabBarController *tabBarController = segue.destinationViewController;
         tabBarController.title = @"TabBar";
         RoutesController *c1 = (RoutesController *)[tabBarController.viewControllers objectAtIndex:0];
         c1.stationFrom = self.stationFrom;
         c1.stationTo = self.stationTo;
         c1.startDate = @"2015-03-28"; //self.startDate; // нужно изменить формат даты для запроса
+        */
     }
 }
 

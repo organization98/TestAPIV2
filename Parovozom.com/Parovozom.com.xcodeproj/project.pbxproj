@@ -529,6 +529,42 @@
 			name = WebViewController;
 			sourceTree = "<group>";
 		};
+		324CD0921AC02B5B00E68857 /* Tab Buy Tickets */ = {
+			isa = PBXGroup;
+			children = (
+				324715241A948454002F0555 /* RoutesController */,
+				3247158A1A949024002F0555 /* SchemeController */,
+				324715961A949060002F0555 /* WebViewController */,
+			);
+			name = "Tab Buy Tickets";
+			sourceTree = "<group>";
+		};
+		324CD0931AC02B8100E68857 /* Tab My Tickets */ = {
+			isa = PBXGroup;
+			children = (
+				329C49851ABEC989003FCA59 /* MyTicketsController */,
+			);
+			name = "Tab My Tickets";
+			sourceTree = "<group>";
+		};
+		324CD0941AC02B9200E68857 /* Tab More */ = {
+			isa = PBXGroup;
+			children = (
+				329C49811ABEC925003FCA59 /* MoreController */,
+			);
+			name = "Tab More";
+			sourceTree = "<group>";
+		};
+		324CD0951AC0335600E68857 /* Main Controller */ = {
+			isa = PBXGroup;
+			children = (
+				32ECC4D61A9056AC000EE957 /* StartController */,
+				32ECC4DA1A9056E2000EE957 /* ChoiseStationController */,
+				32ECC4E21A905737000EE957 /* DateDepartureController */,
+			);
+			name = "Main Controller";
+			sourceTree = "<group>";
+		};
 		327B2B0A1ABDF82200439DDC /* Route Object */ = {
 			isa = PBXGroup;
 			children = (
@@ -572,14 +608,10 @@
 		327B2B0E1ABDF90C00439DDC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				32ECC4D61A9056AC000EE957 /* StartController */,
-				32ECC4DA1A9056E2000EE957 /* ChoiseStationController */,
-				32ECC4E21A905737000EE957 /* DateDepartureController */,
-				324715241A948454002F0555 /* RoutesController */,
-				329C49851ABEC989003FCA59 /* MyTicketsController */,
-				329C49811ABEC925003FCA59 /* MoreController */,
-				3247158A1A949024002F0555 /* SchemeController */,
-				324715961A949060002F0555 /* WebViewController */,
+				324CD0951AC0335600E68857 /* Main Controller */,
+				324CD0921AC02B5B00E68857 /* Tab Buy Tickets */,
+				324CD0931AC02B8100E68857 /* Tab My Tickets */,
+				324CD0941AC02B9200E68857 /* Tab More */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";

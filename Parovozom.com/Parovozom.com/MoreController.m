@@ -10,4 +10,8 @@
 
 @implementation MoreController
 
+- (void)viewDidLoad {
+    self.navigationItem.title = NSStringFromClass([MoreController class]);
+}
+
 @end
