@@ -146,7 +146,7 @@
         RoutesController *c1 = (RoutesController *)navController1.topViewController;
         c1.stationFrom = self.stationFrom;
         c1.stationTo = self.stationTo;
-        c1.startDate = @"2015-03-28"; //self.startDate; // нужно изменить формат даты для запроса
+        c1.startDate = @"2015-04-28"; //self.startDate; // нужно изменить формат даты для запроса
         
         /*
         UITabBarController *tabBarController = segue.destinationViewController;
@@ -169,6 +169,8 @@
         self.stationTo = code;
     }
 }
+
+
 
 // изменяем Title для кнопоки Departure Date
 - (void)setDepartureDate:(NSDate *)date {
